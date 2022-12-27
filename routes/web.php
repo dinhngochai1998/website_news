@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::prefix('users')->group(function () {
-    Route::get('/logout', 'App\Http\Controllers\UserController@index')->name('user.index');
 
-});
+    Route::get('/users', 'App\Http\Controllers\UserController@index')->name('user.index');
+
