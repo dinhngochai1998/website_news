@@ -7,6 +7,7 @@ use App\Models\User;
 class UserController extends Controller
 {
     public function index() {
+
        $users = User::query()->get();
        return view('user', compact('users'));
     }
