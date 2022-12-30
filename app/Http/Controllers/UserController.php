@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 
-class UserController
+class UserController extends Controller
 {
     public function index() {
        $users = User::query()->get();
-
        return view('user', compact('users'));
     }
 
